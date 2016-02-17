@@ -5,3 +5,12 @@ node_js:
   - 0.12
   - 4
   - 5
+
+deploy:
+  provider: npm
+  email: tobias.bieniek@gmx.de
+  api_key:
+    secure: RpFjofiuEqEovxfewpJv8FlPLN+EBSjllYuPz/qBjGv1+koVP+Y6E4ZExq/Zx5kP3EQ4oh3eYdxe0NV6da/f9Gqhz8w2HEdCRAbnbxKAw2LG9CWLr6yxjJDlToNrd0hrBcMdAVObjzZUMTVbhUMuTOWem4kFozYwZp/KAf8uYE2kfP1IUxKDeV3bFHAwXC/KrfgPE3m5Q8VUvwvoEDXf7ieRJM75akhTndtRvAQN3kKYvDuIzTmjazr0f/pRQkUablSExsqFKBu6d8xFrwp57ecSwOr292vf6Ye+fudaWcWK4FAseK3/G6XwokobeTFSL9BgDgB/z1k2NnwADeEKMq2iyGzNRky4tKckTHsmLrOx5ajet7Oa5bMbKfJqPp7Qy7oKnucnhGTq7/0tjr52XR/C04fpJBYiNnsppibF9AwhVakaNAVr1SB1tzSqjj6nqCVltuVElHuOGcC4lZQ6UlX+gJ7t8zTKK8SX/ajmXC2rgxAbrrNZfJ/GjE9lkjX8jV9uD8OmDQs8wc64Gok0GdD/wjG9x6Hms3DezNlEdXxtS/Gs96bJKOiXbZJ/8QjadIRlpFuTq0oYzaTyivE5cWl0sxbDNxdEOktDzxEWWgLSf6Z0pXevk6zExc4FmVohk1OrByEWpEZj3dyO113HsdfxsznziqXgeSNbEd0VUMc=
+  on:
+    tags: true
+    repo: Turbo87/eslint-plugin-chai-expect
