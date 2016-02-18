@@ -29,7 +29,8 @@ Enable the rules that you would like to use:
 ```json
 {
   "rules": {
-    "chai-expect/missing-assertion": 2
+    "chai-expect/missing-assertion": 2,
+    "chai-expect/terminating-properties": 1
   }
 }
 ```
@@ -38,6 +39,7 @@ Enable the rules that you would like to use:
 # Rules
 
 - `missing-assertion` - Prevent calling `expect(...)` without an assertion like `.to.be.ok`
+- `terminating-properties` - Prevent calling `to.be.ok` and other assertion properties as functions
 
 
 # License

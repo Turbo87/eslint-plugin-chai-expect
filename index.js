@@ -2,6 +2,7 @@
 
 module.exports = {
   rules: {
-    'missing-assertion': require('./lib/rules/missing-assertion')
+    'missing-assertion': require('./lib/rules/missing-assertion'),
+    'terminating-properties': require('./lib/rules/terminating-properties')
   }
 };
