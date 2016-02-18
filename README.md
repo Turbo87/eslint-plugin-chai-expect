@@ -38,6 +38,7 @@ Enable the rules that you would like to use:
 
 # Rules
 
+- `no-inner-compare` - Prevent using comparisons in the `expect()` argument
 - `missing-assertion` - Prevent calling `expect(...)` without an assertion like `.to.be.ok`
 - `terminating-properties` - Prevent calling `to.be.ok` and other assertion properties as functions
 
