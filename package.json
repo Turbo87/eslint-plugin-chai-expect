@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-chai-expect",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Tobias Bieniek <tobias.bieniek@gmail.com>",
   "description": "ESLint plugin that checks for common chai.js expect() mistakes",
   "main": "index.js",
