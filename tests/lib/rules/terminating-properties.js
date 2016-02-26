@@ -19,6 +19,8 @@ ruleTester.run('terminating-properties', rule, {
     code: [
       'somethingElse.ok();'
     ].join('\n')
+  }, {
+    code: 'expect(something).to.equal(somethingElse);'
   }],
 
   invalid: [{

@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1.1
+
+- `terminating-properties`: Fix condition
+
+
 ## v1.1.0
 
 - Add `no-inner-compare` rule
