@@ -5,14 +5,14 @@
 ESLint plugin that checks for common chai.js expect() mistakes
 
 
-# Installation
+## Installation
 
 ```
 npm install eslint-plugin-chai-expect
 ```
 
 
-# Configuration
+## Configuration
 
 Add a `plugins` section and specify `chai-expect` as a plugin:
 
@@ -36,13 +36,13 @@ Enable the rules that you would like to use:
 ```
 
 
-# Rules
+## Rules
 
 - `no-inner-compare` - Prevent using comparisons in the `expect()` argument
 - `missing-assertion` - Prevent calling `expect(...)` without an assertion like `.to.be.ok`
 - `terminating-properties` - Prevent calling `to.be.ok` and other assertion properties as functions
 
 
-# License
+## License
 
 eslint-plugin-chai-expect is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
