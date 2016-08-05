@@ -22,8 +22,8 @@
   "homepage": "https://github.com/turbo87/eslint-plugin-chai-expect",
   "bugs": "https://github.com/turbo87/eslint-plugin-chai-expect/issues",
   "devDependencies": {
-    "eslint": "2.1.0",
-    "mocha": "2.4.5"
+    "eslint": "3.2.2",
+    "mocha": "3.0.1"
   },
   "keywords": [
     "eslint",
