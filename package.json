@@ -31,5 +31,8 @@
     "eslintplugin",
     "chai"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "greenkeeper": {
+    "ignore": ["eslint"]
+  }
 }
