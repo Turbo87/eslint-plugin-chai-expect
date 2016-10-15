@@ -1,10 +1,25 @@
 language: node_js
 
 node_js:
-  - 0.10
-  - 0.12
-  - 4
-  - 5
+  - "0.10"
+  - "0.12"
+  - "4"
+  - "6"
+
+env:
+  - ESLINT_VERSION=2
+  - ESLINT_VERSION=3
+
+matrix:
+  exclude:
+  - node_js: "0.10"
+    env: ESLINT_VERSION=3
+  - node_js: "0.12"
+    env: ESLINT_VERSION=3
+
+install:
+  - npm install
+  - npm install eslint@$ESLINT_VERSION
 
 deploy:
   provider: npm
