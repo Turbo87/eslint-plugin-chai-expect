@@ -41,6 +41,7 @@ Enable the rules that you would like to use:
 - `no-inner-compare` - Prevent using comparisons in the `expect()` argument
 - `missing-assertion` - Prevent calling `expect(...)` without an assertion like `.to.be.ok`
 - `terminating-properties` - Prevent calling `to.be.ok` and other assertion properties as functions
+- `no-invalid-terminating-properties` - Prevent using invalid terminating properties such as  `to.be.falsy` or `to.be.truthy`
 
 
 ## License
