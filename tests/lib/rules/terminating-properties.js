@@ -21,9 +21,6 @@ ruleTester.run('terminating-properties', rule, {
     ].join('\n')
   }, {
     code: 'expect(something).to.equal(somethingElse);'
-  },{
-    options: [{whitelist:['json']}],
-    code: 'expect(something).to.be.json'
   }],
 
   invalid: [{
@@ -54,14 +51,17 @@ ruleTester.run('terminating-properties', rule, {
       message: '"to.exist" used as function'
     }]
   },  {
-    options: [{whitelist:['json']}],
+    options: [{terminators:['something', 'somethingElse']}],
     code: [
       'it("fails as expected", function() {',
-      '  expect(result).to.be.json();',
+      '  expect(result).to.be.something();',
+      '  expect(result).to.be.somethingElse();',
       '});'
     ].join('\n'),
     errors: [{
-      message: '"to.be.json" used as function'
+      message: '"to.be.something" used as function'
+    }, {
+      message: '"to.be.somethingElse" used as function'
     }]
   }]
 });
