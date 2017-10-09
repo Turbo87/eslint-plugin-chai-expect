@@ -22,6 +22,7 @@ ruleTester.run('terminating-properties', rule, {
   }, {
     code: 'expect(something).to.equal(somethingElse);'
   },{
+    options: [{whitelist:['json']}],
     code: 'expect(something).to.be.json'
   }],
 
@@ -53,6 +54,7 @@ ruleTester.run('terminating-properties', rule, {
       message: '"to.exist" used as function'
     }]
   },  {
+    options: [{whitelist:['json']}],
     code: [
       'it("fails as expected", function() {',
       '  expect(result).to.be.json();',
