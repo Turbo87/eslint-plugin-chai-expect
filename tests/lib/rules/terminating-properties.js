@@ -21,6 +21,9 @@ ruleTester.run('terminating-properties', rule, {
     ].join('\n')
   }, {
     code: 'expect(something).to.equal(somethingElse);'
+  }, {
+    code: 'expect(something).to.be.json;',
+    options: [ {"properties": ["json"] } ]
   }],
 
   invalid: [{
@@ -49,6 +52,12 @@ ruleTester.run('terminating-properties', rule, {
     ].join('\n'),
     errors: [{
       message: '"to.exist" used as function'
+    }]
+  }, {
+    code: 'expect(foo).to.be.json()',
+    options: [ {"properties": ["json"] } ],
+    errors: [{
+      message: '"to.be.json" used as function'
     }]
   }]
 });

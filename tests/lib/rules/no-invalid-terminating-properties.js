@@ -22,6 +22,12 @@ ruleTester.run('no-invalid-terminating-properties', rule, {
   }, {
     code: 'expect(foo).to.be.arguments;'
   }, {
+    code: 'expect(foo).to.be.json;',
+    options: [ {"properties": ["json"] } ]
+  }, {
+    code: 'expect(foo).to.be.html;',
+    options: [ {"properties": ["json", "html"] } ]
+  }, {
     code: 'foo(bar).to.be.falsy;'
   }],
 
@@ -34,6 +40,11 @@ ruleTester.run('no-invalid-terminating-properties', rule, {
     code: 'expect(foo).to.be.truthy;',
     errors: [{
       message: '"truthy" is not a valid property'
+    }]
+  }, {
+    code: 'expect(foo).to.be.json;',
+    errors: [{
+      message: '"json" is not a valid property'
     }]
   }]
 });

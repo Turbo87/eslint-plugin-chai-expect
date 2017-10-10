@@ -43,6 +43,27 @@ Enable the rules that you would like to use:
 - `terminating-properties` - Prevent calling `to.be.ok` and other assertion properties as functions
 - `no-invalid-terminating-properties` - Prevent using invalid terminating properties such as  `to.be.falsy` or `to.be.truthy`
 
+Both `terminating-properties` and `no-invalid-terminating-properties` take an object option with an arrary of *additional*
+properties that you want to be treated as valid (e.g., from chai plugins):
+```json
+{
+  "properties": [
+    "json"
+  ]
+}
+```
+
+Example rule:
+```json
+{
+  "rules": {
+    "chai-expect/terminating-properties": [2, { "properties": [ "json" ] } ]
+  }
+}
+
+```
+
+
 
 ## License
 
