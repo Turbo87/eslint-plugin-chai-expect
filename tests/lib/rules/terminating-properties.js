@@ -51,7 +51,7 @@ ruleTester.run('terminating-properties', rule, {
       message: '"to.exist" used as function'
     }]
   },  {
-    options: [{terminators:['something', 'somethingElse']}],
+    options: [{properties:['something', 'somethingElse']}],
     code: [
       'it("fails as expected", function() {',
       '  expect(result).to.be.something();',
