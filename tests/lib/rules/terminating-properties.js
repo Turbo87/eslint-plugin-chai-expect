@@ -50,5 +50,18 @@ ruleTester.run('terminating-properties', rule, {
     errors: [{
       message: '"to.exist" used as function'
     }]
+  },  {
+    options: [{properties:['something', 'somethingElse']}],
+    code: [
+      'it("fails as expected", function() {',
+      '  expect(result).to.be.something();',
+      '  expect(result).to.be.somethingElse();',
+      '});'
+    ].join('\n'),
+    errors: [{
+      message: '"to.be.something" used as function'
+    }, {
+      message: '"to.be.somethingElse" used as function'
+    }]
   }]
 });
