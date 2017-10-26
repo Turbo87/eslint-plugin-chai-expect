@@ -43,6 +43,44 @@ Enable the rules that you would like to use:
 - `terminating-properties` - Prevent calling `to.be.ok` and other assertion properties as functions
 
 
+### Additional configuration
+
+#### terminating-properties rule
+
+A number of extenstions to chai add additional terminating properties.  For example [chai-http](https://github.com/chaijs/chai-http) adds:
+
+ - headers
+ - html
+ - ip
+ - json
+ - redirect
+ - text
+
+The terminating-properties rule can be configured to ensure these (or other) additional properties are not used as functions:
+
+```json
+{
+  "rules": {
+    "chai-expect/terminating-properties": [ "error", 1, {
+      properties: ['headers', 'html', 'ip', 'json', 'redirect', 'test']
+    }]
+  }
+}
+```
+
+```yaml
+rules:
+  "chai-expect/terminating-properties":
+    - 2
+    - properties:
+      - headers
+      - html
+      - ip
+      - json
+      - redirect
+      - text
+```
+
 ## License
 
 eslint-plugin-chai-expect is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
