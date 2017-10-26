@@ -61,8 +61,8 @@ The terminating-properties rule can be configured to ensure these (or other) add
 ```json
 {
   "rules": {
-    "chai-expect/terminating-properties": [ "error", 1, {
-      properties: ['headers', 'html', 'ip', 'json', 'redirect', 'test']
+    "chai-expect/terminating-properties": ["error", 1, {
+      "properties": ["headers", "html", "ip", "json", "redirect", "test"]
     }]
   }
 }
