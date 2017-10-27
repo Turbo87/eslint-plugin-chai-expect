@@ -61,24 +61,11 @@ The terminating-properties rule can be configured to ensure these (or other) add
 ```json
 {
   "rules": {
-    "chai-expect/terminating-properties": ["error", 1, {
+    "chai-expect/terminating-properties": ["error", {
       "properties": ["headers", "html", "ip", "json", "redirect", "test"]
     }]
   }
 }
-```
-
-```yaml
-rules:
-  "chai-expect/terminating-properties":
-    - 2
-    - properties:
-      - headers
-      - html
-      - ip
-      - json
-      - redirect
-      - text
 ```
 
 ## License
