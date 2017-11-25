@@ -8,7 +8,7 @@ ESLint plugin that checks for common chai.js expect() mistakes
 ## Installation
 
 ```
-npm install eslint-plugin-chai-expect
+npm install --save-dev eslint-plugin-chai-expect
 ```
 
 
