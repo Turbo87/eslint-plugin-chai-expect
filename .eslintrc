@@ -1,6 +1,5 @@
 {
   "extends": "eslint:recommended",
-  "plugins": [ "mocha" ],
   "env": {
     "mocha": true,
     "node": true
