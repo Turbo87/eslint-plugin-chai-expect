@@ -1,7 +1,8 @@
 'use strict';
 
+var importFrom = require('import-from');
 var expect = require('chai').expect;
-var espree = require('espree');
+var espree = importFrom(require.resolve('eslint'), 'espree');
 var findExpectCall = require('../../../lib/util/find-expect-call');
 
 describe('find-expect-call util', function () {

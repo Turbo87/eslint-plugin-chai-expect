@@ -31,7 +31,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "eslint": "2.1.0",
-    "espree": "^3.5.4",
+    "import-from": "^2.1.0",
     "mocha": "^3.0.2"
   },
   "engines": {
