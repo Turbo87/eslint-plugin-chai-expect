@@ -5,6 +5,12 @@
 ESLint plugin that checks for common chai.js expect() mistakes
 
 
+## Requirements
+
+- Node.js 6 or above
+- ESLint 4.x or 5.x
+
+
 ## Installation
 
 ```
