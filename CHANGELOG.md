@@ -1,5 +1,14 @@
 # Changelog
 
+## v2.0.1 (2018-10-13)
+
+#### :rocket: Enhancement
+* [#35](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/35) Add `.npmignore` file ([@Turbo87](https://github.com/Turbo87))
+
+#### Committers: 1
+- Tobias Bieniek ([@Turbo87](https://github.com/Turbo87))
+
+
 ## v2.0.0 (2018-10-13)
 
 #### :boom: Breaking Change
