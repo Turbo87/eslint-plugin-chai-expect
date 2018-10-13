@@ -13,6 +13,7 @@ env:
   - ESLINT_VERSION=2
   - ESLINT_VERSION=3
   - ESLINT_VERSION=4
+  - ESLINT_VERSION=5
 
 matrix:
   exclude:
@@ -20,10 +21,14 @@ matrix:
     env: ESLINT_VERSION=3
   - node_js: "6"
     env: ESLINT_VERSION=4
+  - node_js: "6"
+    env: ESLINT_VERSION=5
   - node_js: "8"
     env: ESLINT_VERSION=3
   - node_js: "8"
     env: ESLINT_VERSION=4
+  - node_js: "8"
+    env: ESLINT_VERSION=5
 
 cache:
   yarn: true
