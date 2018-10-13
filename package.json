@@ -22,7 +22,9 @@
   "homepage": "https://github.com/turbo87/eslint-plugin-chai-expect",
   "bugs": "https://github.com/turbo87/eslint-plugin-chai-expect/issues",
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "2.1.0",
+    "espree": "^3.5.4",
     "mocha": "^3.0.2"
   },
   "keywords": [
@@ -33,6 +35,8 @@
   ],
   "license": "MIT",
   "greenkeeper": {
-    "ignore": ["eslint"]
+    "ignore": [
+      "eslint"
+    ]
   }
 }
