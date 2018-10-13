@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.0.0 (2018-10-13)
+
+#### :boom: Breaking Change
+* [#27](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/27) Drop support for Node.js 4 and below ([@Turbo87](https://github.com/Turbo87))
+
+#### :rocket: Enhancement
+* [#32](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/32) CI: Add ESLint 5 to the test matrix ([@Turbo87](https://github.com/Turbo87))
+
+#### :house: Internal
+* [#34](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/34) CI: Simplify job definition ([@Turbo87](https://github.com/Turbo87))
+* [#33](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/33) tests: Use same `espree` version as the `eslint` dependency ([@Turbo87](https://github.com/Turbo87))
+* [#31](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/31) Use yarn instead of npm ([@Turbo87](https://github.com/Turbo87))
+
+#### Committers: 1
+- Tobias Bieniek ([@Turbo87](https://github.com/Turbo87))
+
+
 ## v1.2.0 (2018-10-13)
 
 #### :rocket: Enhancement
