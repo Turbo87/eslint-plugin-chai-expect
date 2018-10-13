@@ -1,39 +1,39 @@
 {
   "name": "eslint-plugin-chai-expect",
   "version": "1.2.0",
-  "author": "Tobias Bieniek <tobias.bieniek@gmail.com>",
   "description": "ESLint plugin that checks for common chai.js expect() mistakes",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint ./",
-    "test": "npm run lint && npm run unit-test",
-    "unit-test": "mocha tests/**/*.js"
-  },
+  "keywords": [
+    "chai",
+    "eslint",
+    "eslint-plugin",
+    "eslintplugin"
+  ],
+  "homepage": "https://github.com/turbo87/eslint-plugin-chai-expect",
+  "bugs": "https://github.com/turbo87/eslint-plugin-chai-expect/issues",
+  "license": "MIT",
+  "author": "Tobias Bieniek <tobias.bieniek@gmail.com>",
   "files": [
     "LICENSE",
     "README.md",
     "index.js",
     "lib"
   ],
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/turbo87/eslint-plugin-chai-expect"
   },
-  "homepage": "https://github.com/turbo87/eslint-plugin-chai-expect",
-  "bugs": "https://github.com/turbo87/eslint-plugin-chai-expect/issues",
+  "scripts": {
+    "lint": "eslint ./",
+    "test": "npm run lint && npm run unit-test",
+    "unit-test": "mocha tests/**/*.js"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "eslint": "2.1.0",
     "espree": "^3.5.4",
     "mocha": "^3.0.2"
   },
-  "keywords": [
-    "eslint",
-    "eslint-plugin",
-    "eslintplugin",
-    "chai"
-  ],
-  "license": "MIT",
   "greenkeeper": {
     "ignore": [
       "eslint"
