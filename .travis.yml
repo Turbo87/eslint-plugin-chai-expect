@@ -5,6 +5,10 @@ node_js:
   - "8"
   - "10"
 
+branches:
+  except:
+    - /^dependabot\/.*$/
+
 env:
   - ESLINT_VERSION=2
   - ESLINT_VERSION=3
