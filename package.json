@@ -34,6 +34,9 @@
     "espree": "^3.5.4",
     "mocha": "^3.0.2"
   },
+  "engines": {
+    "node": "6.* || 8.* || >= 10.*"
+  },
   "greenkeeper": {
     "ignore": [
       "eslint"
