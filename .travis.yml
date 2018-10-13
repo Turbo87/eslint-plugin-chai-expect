@@ -21,9 +21,16 @@ matrix:
   - node_js: "8"
     env: ESLINT_VERSION=4
 
+cache:
+  yarn: true
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
+
 install:
-  - npm install
-  - npm install eslint@$ESLINT_VERSION
+  - yarn install
+  - yarn add eslint@$ESLINT_VERSION
 
 deploy:
   provider: npm
