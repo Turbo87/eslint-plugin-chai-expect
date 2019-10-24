@@ -11,6 +11,8 @@ ruleTester.run('no-inner-compare', rule, {
     code: 'expect(a && b).to.be.ok;'
   }, {
     code: 'expect(a || b).to.be.ok;'
+  }, {
+    code: 'expect(a).to.equal(5);'
   }],
 
   invalid: [{
@@ -30,6 +32,11 @@ ruleTester.run('no-inner-compare', rule, {
     }]
   }, {
     code: 'expect(a >= b).to.be.ok;',
+    errors: [{
+      message: 'operator ">=" used in expect(), use "to.be.at.least()" instead'
+    }]
+  }, {
+    code: 'expect(a >= b).to.equal(true);',
     errors: [{
       message: 'operator ">=" used in expect(), use "to.be.at.least()" instead'
     }]
