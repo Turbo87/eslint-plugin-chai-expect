@@ -1,9 +1,9 @@
 'use strict';
 
-var rule = require('../../../lib/rules/missing-assertion');
-var RuleTester = require('eslint').RuleTester;
+const rule = require('../../../lib/rules/missing-assertion');
+const {RuleTester} = require('eslint');
 
-var ruleTester = new RuleTester();
+const ruleTester = new RuleTester();
 ruleTester.run('missing-assertion', rule, {
   valid: [{
     code: [
