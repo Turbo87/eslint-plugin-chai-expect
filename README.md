@@ -2,7 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/Turbo87/eslint-plugin-chai-expect/master.svg)](https://travis-ci.org/Turbo87/eslint-plugin-chai-expect)
 
-ESLint plugin that checks for common chai.js expect() mistakes
+ESLint plugin that checks for common chai.js `expect()` mistakes
 
 
 ## Requirements
@@ -53,7 +53,7 @@ Enable the rules that you would like to use:
 
 #### terminating-properties rule
 
-A number of extenstions to chai add additional terminating properties.  For example [chai-http](https://github.com/chaijs/chai-http) adds:
+A number of extensions to chai add additional terminating properties.  For example [chai-http](https://github.com/chaijs/chai-http) adds:
 
  - headers
  - html
