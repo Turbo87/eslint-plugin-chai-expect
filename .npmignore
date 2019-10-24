@@ -1,7 +1,7 @@
 /tests/
 /.editorconfig
 /.eslintignore
-/.eslintrc
+/.eslintrc.json
 /.gitignore
 /.npmignore
 /.travis.yml
