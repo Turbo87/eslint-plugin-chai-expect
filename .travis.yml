@@ -1,5 +1,5 @@
 language: node_js
-node_js: 10
+node_js: 12
 
 branches:
   except:
@@ -32,7 +32,12 @@ jobs:
       env: ESLINT_VERSION=3
 
     - <<: *test
+      node_js: 10
       env: ESLINT_VERSION=4
+
+    - <<: *test
+      node_js: 10
+      env: ESLINT_VERSION=5
 
 deploy:
   provider: npm
