@@ -35,12 +35,21 @@ Enable the rules that you would like to use:
 ```json
 {
   "rules": {
+    "chai-expect/no-inner-compare": 2,
     "chai-expect/missing-assertion": 2,
-    "chai-expect/terminating-properties": 1
+    "chai-expect/terminating-properties": 2
   }
 }
 ```
 
+Or, if you just want the above defaults, you can avoid all of the above
+and just extend the config:
+
+```json
+{
+  "extends": ["plugin:chai-expect/recommended"]
+}
+```
 
 ## Rules
 
