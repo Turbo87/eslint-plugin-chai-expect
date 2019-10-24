@@ -3,7 +3,7 @@
 const rule = require('../../../lib/rules/missing-assertion');
 const {RuleTester} = require('eslint');
 
-const ruleTester = new RuleTester();
+let ruleTester = new RuleTester();
 ruleTester.run('missing-assertion', rule, {
   valid: [{
     code: [

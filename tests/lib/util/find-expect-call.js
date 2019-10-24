@@ -7,16 +7,16 @@ const findExpectCall = require('../../../lib/util/find-expect-call');
 
 describe('find-expect-call util', function () {
   it('Finds expect statements which are considered member expressions', function () {
-    const code = 'expect(true).to.be.ok;';
-    const ast = espree.parse(code);
-    const result = findExpectCall(ast.body[0].expression);
+    let code = 'expect(true).to.be.ok;';
+    let ast = espree.parse(code);
+    let result = findExpectCall(ast.body[0].expression);
     expect(result).to.be.an('object');
   });
 
   it('Finds expect statements which are considered recursive call expressions', function () {
-    const code = 'expect(true).to.equal(true);';
-    const ast = espree.parse(code);
-    const result = findExpectCall(ast.body[0].expression);
+    let code = 'expect(true).to.equal(true);';
+    let ast = espree.parse(code);
+    let result = findExpectCall(ast.body[0].expression);
     expect(result).to.be.an('object');
   });
 });

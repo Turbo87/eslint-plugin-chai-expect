@@ -7,7 +7,7 @@ const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
 
-const rules = fs.readdirSync(path.resolve(__dirname, '../lib/rules/'))
+let rules = fs.readdirSync(path.resolve(__dirname, '../lib/rules/'))
   .map((f) => {
     return path.basename(f, '.js');
   });

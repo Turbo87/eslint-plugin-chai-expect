@@ -3,7 +3,7 @@
 const rule = require('../../../lib/rules/terminating-properties');
 const {RuleTester} = require('eslint');
 
-const ruleTester = new RuleTester();
+let ruleTester = new RuleTester();
 ruleTester.run('terminating-properties', rule, {
   valid: [{
     code: [
