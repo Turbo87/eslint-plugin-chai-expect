@@ -23,6 +23,18 @@ ruleTester.run('no-inner-literal', rule, {
     parserOptions: {
       ecmaVersion: 2015
     }
+  }, {
+    code: `
+      it('should have no problems', function () {
+        return expect(a).to.be.ok();
+      });
+    `
+  }, {
+    code: `
+      it('should have no problems', function () {
+        return expect(a).to.be.true;
+      });
+    `
   }],
 
   invalid: [{
@@ -50,14 +62,6 @@ ruleTester.run('no-inner-literal', rule, {
     errors: [{
       message: '`"string"` used in expect()'
     }]
-  }, {
-    code: 'expect(132n).to.be.ok;',
-    errors: [{
-      message: '`132n` used in expect()'
-    }],
-    parserOptions: {
-      ecmaVersion: 2020
-    }
   }, {
     code: 'expect(/regex/).to.be.ok;',
     errors: [{
@@ -93,5 +97,31 @@ ruleTester.run('no-inner-literal', rule, {
     errors: [{
       message: '`false` used in expect()'
     }]
-  }]
+  }, {
+    code: `
+      it('should have no problems but does', function () {
+        return expect(false).to.equal(true);
+      });
+    `,
+    errors: [{
+      message: '`false` used in expect()'
+    }]
+  }, {
+    code: `
+      it('should have no problems but does', function () {
+        return expect(false).to.be.true;
+      });
+    `,
+    errors: [{
+      message: '`false` used in expect()'
+    }]
+  }, ...require('eslint/package.json').version.match(/^[1-5]\./) ? [] : [{
+    code: 'expect(132n).to.be.ok;',
+    errors: [{
+      message: '`132n` used in expect()'
+    }],
+    parserOptions: {
+      ecmaVersion: 2020
+    }
+  }]]
 });
