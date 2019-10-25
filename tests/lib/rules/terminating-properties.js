@@ -1,9 +1,9 @@
 'use strict';
 
-var rule = require('../../../lib/rules/terminating-properties');
-var RuleTester = require('eslint').RuleTester;
+const rule = require('../../../lib/rules/terminating-properties');
+const {RuleTester} = require('eslint');
 
-var ruleTester = new RuleTester();
+let ruleTester = new RuleTester();
 ruleTester.run('terminating-properties', rule, {
   valid: [{
     code: [

@@ -1,9 +1,9 @@
 'use strict';
 
-var rule = require('../../../lib/rules/no-inner-compare');
-var RuleTester = require('eslint').RuleTester;
+const rule = require('../../../lib/rules/no-inner-compare');
+const {RuleTester} = require('eslint');
 
-var ruleTester = new RuleTester();
+let ruleTester = new RuleTester();
 ruleTester.run('no-inner-compare', rule, {
   valid: [{
     code: 'expect(true).to.be.ok;'
