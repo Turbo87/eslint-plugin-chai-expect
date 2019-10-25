@@ -12,6 +12,9 @@
   "bugs": "https://github.com/turbo87/eslint-plugin-chai-expect/issues",
   "license": "MIT",
   "author": "Tobias Bieniek <tobias.bieniek@gmail.com>",
+  "contributors": [
+    "Brett Zamir"
+  ],
   "files": [
     "LICENSE",
     "README.md",
@@ -28,6 +31,7 @@
     "test": "npm run lint && npm run unit-test",
     "unit-test": "mocha tests/**/*.js"
   },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",
     "eslint": "5.16.0",
