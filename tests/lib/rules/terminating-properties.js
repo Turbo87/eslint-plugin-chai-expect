@@ -59,5 +59,27 @@ ruleTester.run('terminating-properties', rule, {
     }, {
       message: '"to.be.somethingElse" used as function'
     }]
+  }, {
+    code: `
+      it("fails as expected", function() {
+        return expect(true).to.exist();
+      });
+    `,
+    errors: [{
+      message: '"to.exist" used as function'
+    }]
+  },  {
+    options: [{properties:['something', 'somethingElse']}],
+    code: `
+      it("fails as expected", function() {
+        expect(result).to.be.something();
+        return expect(result).to.be.somethingElse();
+      });
+    `,
+    errors: [{
+      message: '"to.be.something" used as function'
+    }, {
+      message: '"to.be.somethingElse" used as function'
+    }]
   }]
 });
