@@ -31,6 +31,9 @@
     "test": "npm run lint && npm run unit-test",
     "unit-test": "mocha tests/**/*.js"
   },
+  "peerDependencies": {
+    "eslint": ">=2.0.0 <= 6.x"
+  },
   "dependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",
