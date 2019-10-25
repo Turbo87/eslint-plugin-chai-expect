@@ -13,6 +13,18 @@ ruleTester.run('no-inner-compare', rule, {
     code: 'expect(a || b).to.be.ok;'
   }, {
     code: 'expect(a).to.equal(5);'
+  }, {
+    code: `
+      it('should have no problems', function () {
+        return expect(a).to.be.ok();
+      });
+    `
+  }, {
+    code: `
+      it('should have no problems', function () {
+        return expect(a).to.be.true;
+      });
+    `
   }],
 
   invalid: [{
@@ -37,6 +49,24 @@ ruleTester.run('no-inner-compare', rule, {
     }]
   }, {
     code: 'expect(a >= b).to.equal(true);',
+    errors: [{
+      message: 'operator ">=" used in expect(), use "to.be.at.least()" instead'
+    }]
+  }, {
+    code: `
+      it('should have no problems but does', function () {
+        return expect(a >= b).to.equal(true);
+      });
+    `,
+    errors: [{
+      message: 'operator ">=" used in expect(), use "to.be.at.least()" instead'
+    }]
+  }, {
+    code: `
+      it('should have no problems but does', function () {
+        return expect(a >= b).to.be.true;
+      });
+    `,
     errors: [{
       message: 'operator ">=" used in expect(), use "to.be.at.least()" instead'
     }]
