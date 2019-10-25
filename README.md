@@ -36,6 +36,7 @@ Enable the rules that you would like to use:
 {
   "rules": {
     "chai-expect/no-inner-compare": 2,
+    "chai-expect/no-inner-literal": 2,
     "chai-expect/missing-assertion": 2,
     "chai-expect/terminating-properties": 2
   }
@@ -54,8 +55,13 @@ and just extend the config:
 ## Rules
 
 - `no-inner-compare` - Prevent using comparisons in the `expect()` argument
-- `missing-assertion` - Prevent calling `expect(...)` without an assertion like `.to.be.ok`
-- `terminating-properties` - Prevent calling `to.be.ok` and other assertion properties as functions
+- `no-inner-literal` - Prevent using literals in the `expect()` argument
+  (`undefined`, `null`, `NaN`, `(+|-)Infinity`, `this`, booleans, numbers,
+  strings, and BigInt or regex literals)
+- `missing-assertion` - Prevent calling `expect(...)` without an assertion
+  like `.to.be.ok`
+- `terminating-properties` - Prevent calling `to.be.ok` and other assertion
+  properties as functions
 
 
 ### Additional configuration
@@ -82,6 +88,7 @@ The terminating-properties rule can be configured to ensure these (or other) add
   }
 }
 ```
+
 
 ## License
 
