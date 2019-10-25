@@ -11,12 +11,39 @@ ruleTester.run('missing-assertion', rule, {
         expect(true).to.be.ok;
       });
     `
+  }, {
+    code: `
+      it("works as expected", function() {
+        expect(true).to.be.ok();
+      });
+    `
+  }, {
+    code: `
+      it("works as expected", function() {
+        return expect(true).to.be.ok;
+      });
+    `
+  }, {
+    code: `
+      it("works as expected", function() {
+        return expect(true).to.be.ok();
+      });
+    `
   }],
 
   invalid: [{
     code: `
       it("fails as expected", function() {
         expect(true);
+      });
+    `,
+    errors: [{
+      message: 'expect(...) used without assertion'
+    }]
+  }, {
+    code: `
+      it("fails as expected", function() {
+        return expect(true);
       });
     `,
     errors: [{
