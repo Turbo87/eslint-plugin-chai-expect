@@ -24,7 +24,7 @@ jobs:
       env: ESLINT_VERSION=2
 
       install:
-        - yarn install
+        - yarn install --ignore-engines
         - yarn add eslint@$ESLINT_VERSION
 
     - <<: *test
