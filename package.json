@@ -37,7 +37,7 @@
   "dependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^6.5.1",
+    "eslint": "^6.6.0",
     "import-from": "^2.1.0",
     "mocha": "^6.2.2"
   },
