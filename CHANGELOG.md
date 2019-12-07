@@ -1,5 +1,30 @@
 # Changelog
 
+## v2.1.0 (2019-12-07)
+
+#### :rocket: Enhancement
+* [#84](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/84) Add `no-inner-literal` rule ([@brettz9](https://github.com/brettz9))
+* [#76](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/76) Add ESLint peer dependency ([@brettz9](https://github.com/brettz9))
+* [#71](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/71) Add `recommended` config ([@brettz9](https://github.com/brettz9))
+* [#81](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/81) no-inner-compare: Add support for `expect(a != b).to.equal(true)` ([@brettz9](https://github.com/brettz9))
+
+#### :bug: Bug Fix
+* [#88](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/88) Allow `terminating-properties` with `ReturnStatement` ([@brettz9](https://github.com/brettz9))
+* [#87](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/87) Allow `return` with `no-inner-compare` ([@brettz9](https://github.com/brettz9))
+
+#### :memo: Documentation
+* [#78](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/78) Adjust README ([@brettz9](https://github.com/brettz9))
+
+#### :house: Internal
+* [#85](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/85) Use ES6 template literals for multiline testing code ([@brettz9](https://github.com/brettz9))
+* [#77](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/77) CI: Add ESLint 6 to test matrix ([@brettz9](https://github.com/brettz9))
+* [#82](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/82) Use ES6 syntax features ([@brettz9](https://github.com/brettz9))
+* [#83](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/83) npm: Add recommended package.json fields (contributors, dependencies) ([@brettz9](https://github.com/brettz9))
+
+#### Committers: 1
+- Brett Zamir ([@brettz9](https://github.com/brettz9))
+
+
 ## v2.0.1 (2018-10-13)
 
 #### :rocket: Enhancement
