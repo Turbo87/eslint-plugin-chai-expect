@@ -32,7 +32,7 @@
     "unit-test": "mocha tests/**/*.js"
   },
   "peerDependencies": {
-    "eslint": ">=2.0.0 <= 6.x"
+    "eslint": ">=2.0.0 <= 7.x"
   },
   "dependencies": {},
   "devDependencies": {
