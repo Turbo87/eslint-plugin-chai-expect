@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.2.0 (2020-07-08)
+
+#### :rocket: Enhancement
+* [#106](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/106) Add support for ESLint@7 as a peerDependency ([@epmatsw](https://github.com/epmatsw))
+
+#### :house: Internal
+* [#113](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/113) Fix CI builds ([@Turbo87](https://github.com/Turbo87))
+* [#99](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/99) Add `meta.type` ([@brettz9](https://github.com/brettz9))
+
+#### Committers: 3
+- Brett Zamir ([@brettz9](https://github.com/brettz9))
+- Tobias Bieniek ([@Turbo87](https://github.com/Turbo87))
+- Will Stamper ([@epmatsw](https://github.com/epmatsw))
+
+
 ## v2.1.0 (2019-12-07)
 
 #### :rocket: Enhancement
