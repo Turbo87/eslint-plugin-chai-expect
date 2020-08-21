@@ -1,5 +1,5 @@
 language: node_js
-node_js: 12
+node_js: 10
 
 branches:
   except:
@@ -20,7 +20,6 @@ jobs:
 
     - &test
       stage: test
-      node_js: 6
       env: ESLINT_VERSION=2
 
       install:
@@ -28,15 +27,12 @@ jobs:
         - yarn add eslint@$ESLINT_VERSION
 
     - <<: *test
-      node_js: 8
       env: ESLINT_VERSION=3
 
     - <<: *test
-      node_js: 10
       env: ESLINT_VERSION=4
 
     - <<: *test
-      node_js: 10
       env: ESLINT_VERSION=5
 
 deploy:
