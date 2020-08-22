@@ -35,6 +35,14 @@ jobs:
     - <<: *test
       env: ESLINT_VERSION=5
 
+    - <<: *test
+      node_js: 12
+      env: ESLINT_VERSION=6
+
+    - <<: *test
+      node_js: 14
+      env: ESLINT_VERSION=7
+
 deploy:
   provider: npm
   email: tobias.bieniek@gmx.de
