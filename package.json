@@ -29,7 +29,7 @@
   "scripts": {
     "lint": "eslint ./",
     "test": "npm run lint && npm run unit-test",
-    "unit-test": "mocha tests/**/*.js"
+    "unit-test": "nyc mocha tests/**/*.js"
   },
   "peerDependencies": {
     "eslint": ">=2.0.0 <= 7.x"
@@ -39,7 +39,8 @@
     "chai": "^4.2.0",
     "eslint": "^7.7.0",
     "import-from": "^3.0.0",
-    "mocha": "^8.1.1"
+    "mocha": "^8.1.1",
+    "nyc": "^15.1.0"
   },
   "engines": {
     "node": "10.* || 12.* || >= 14.*"
