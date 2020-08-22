@@ -12,6 +12,12 @@ ruleTester.run('terminating-properties', rule, {
       });
     `
   }, {
+    code: `
+      it("works as expected", function() {
+        return;
+      });
+    `
+  }, {
     code: 'ok();'
   }, {
     code: 'somethingElse.ok();'

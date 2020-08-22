@@ -6,11 +6,15 @@ const {RuleTester} = require('eslint');
 let ruleTester = new RuleTester();
 ruleTester.run('no-inner-compare', rule, {
   valid: [{
+    code: 'new A();'
+  }, {
     code: 'expect(true).to.be.ok;'
   }, {
     code: 'expect(a && b).to.be.ok;'
   }, {
     code: 'expect(a || b).to.be.ok;'
+  }, {
+    code: 'expect(a | b).to.be.ok;'
   }, {
     code: 'expect(a).to.equal(5);'
   }, {
@@ -21,9 +25,9 @@ ruleTester.run('no-inner-compare', rule, {
     `
   }, {
     code: `
-      it('should have no problems', function () {
-        return expect(a).to.be.true;
-      });
+    it('should have no problems', function () {
+      return new A();
+    });
     `
   }],
 

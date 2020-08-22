@@ -6,6 +6,10 @@ const {RuleTester} = require('eslint');
 let ruleTester = new RuleTester();
 ruleTester.run('no-inner-literal', rule, {
   valid: [{
+    code: 'new A();'
+  }, {
+    code: 'expect();'
+  }, {
     code: 'expect(a).to.be.ok;'
   }, {
     code: 'expect(a && b).to.be.ok;'
@@ -35,7 +39,13 @@ ruleTester.run('no-inner-literal', rule, {
         return expect(a).to.be.true;
       });
     `
-  }],
+  }, {
+    code: `
+    it('should have no problems', function () {
+      return new A();
+    });
+  `
+}],
 
   invalid: [{
     code: 'expect(undefined).to.be.ok;',
