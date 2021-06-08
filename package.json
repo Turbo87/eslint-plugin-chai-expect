@@ -45,6 +45,13 @@
   "engines": {
     "node": "10.* || 12.* || >= 14.*"
   },
+  "nyc": {
+    "check-coverage": true,
+    "branches": 100,
+    "lines": 100,
+    "functions": 100,
+    "statements": 100
+  },
   "greenkeeper": {
     "ignore": [
       "eslint"
