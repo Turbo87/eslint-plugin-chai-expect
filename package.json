@@ -36,11 +36,11 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "chai": "^4.3.4",
-    "eslint": "^8.0.1",
-    "import-from": "^3.0.0",
-    "mocha": "^8.4.0",
-    "nyc": "^15.1.0"
+    "chai": "4.3.4",
+    "eslint": "8.0.1",
+    "import-from": "3.0.0",
+    "mocha": "8.4.0",
+    "nyc": "15.1.0"
   },
   "engines": {
     "node": "10.* || 12.* || >= 14.*"
