@@ -1,5 +1,27 @@
 # Changelog
 
+## v3.0.0 (2021-10-20)
+
+#### :boom: Breaking Change
+* [#125](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/125) Drop support for Node 6 and 8 ([@Turbo87](https://github.com/Turbo87))
+
+#### :rocket: Enhancement
+* [#173](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/173) Declare ESLint v8 support ([@ewanharris](https://github.com/ewanharris))
+
+#### :house: Internal
+* [#176](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/176) CI: Add `release` job ([@Turbo87](https://github.com/Turbo87))
+* [#175](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/175) Add GitHub Actions config ([@Turbo87](https://github.com/Turbo87))
+* [#128](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/128) CI: Check Node 12 and 14 and ESLint 6 and 7 ([@Turbo87](https://github.com/Turbo87))
+* [#100](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/100) Improve test coverage ([@brettz9](https://github.com/brettz9))
+* [#115](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/115) Use `nyc` to track test coverage ([@brettz9](https://github.com/brettz9))
+* [#114](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/114) Update `yarn.lock` file ([@brettz9](https://github.com/brettz9))
+
+#### Committers: 3
+- Brett Zamir ([@brettz9](https://github.com/brettz9))
+- Ewan Harris ([@ewanharris](https://github.com/ewanharris))
+- Tobias Bieniek ([@Turbo87](https://github.com/Turbo87))
+
+
 ## v2.2.0 (2020-07-08)
 
 #### :rocket: Enhancement
