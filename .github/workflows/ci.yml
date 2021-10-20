@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - "v*"
+  pull_request:
+
+env:
+  FORCE_COLOR: 1
+
+jobs:
+  lint:
+    name: Linting
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+
+      - run: yarn install
+      - run: yarn lint
+
+  test-node:
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+
+    name: Tests (Node.js ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: yarn install
+      - run: yarn unit-test
+
+  test-eslint:
+    strategy:
+      matrix:
+        eslint-version: [2.0.0, 3.0.0, 4.0.0, 5.0.0, 6.0.0, 7.0.0]
+
+    name: Tests (ESLint ${{ matrix.eslint-version }})
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+
+      - run: yarn install --ignore-engines
+      - run: yarn add eslint@${{ matrix.eslint-version }}
+      - run: yarn unit-test
