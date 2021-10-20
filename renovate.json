@@ -1,5 +1,18 @@
 {
   "extends": [
-    "config:base"
+    "config:js-lib",
+    ":automergePatch",
+    ":automergeLinters",
+    ":automergeTesters",
+    ":dependencyDashboard",
+    ":maintainLockFilesWeekly",
+    ":semanticCommitsDisabled"
+  ],
+  "packageRules": [
+    {
+      "matchCurrentVersion": ">= 1.0.0",
+      "updateTypes": ["minor"],
+      "automerge": true
+    }
   ]
 }
