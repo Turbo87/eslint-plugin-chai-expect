@@ -29,7 +29,10 @@ ruleTester.run('missing-assertion', rule, {
         return expect(true).to.be.ok();
       });
     `
-  }],
+  }, {
+    code: 'it("works as expected", () => expect(true).to.be.true);',
+    parserOptions: { ecmaVersion: 6 },
+  } ],
 
   invalid: [{
     code: `
@@ -46,6 +49,12 @@ ruleTester.run('missing-assertion', rule, {
         return expect(true);
       });
     `,
+    errors: [{
+      message: 'expect(...) used without assertion'
+    }]
+  }, {
+    code: 'it("fails as expected", () => expect(true));',
+    parserOptions: { ecmaVersion: 6 },
     errors: [{
       message: 'expect(...) used without assertion'
     }]
