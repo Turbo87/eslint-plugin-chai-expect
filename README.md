@@ -4,6 +4,10 @@
 
 ESLint plugin that checks for common chai.js `expect()` mistakes
 
+> [!IMPORTANT]
+> The `recommended` preset is for the ESLint legacy configuration system
+> (`.eslintrc.json`). The `recommended-flat` configuration is for the new flat
+> configuration system.
 
 ## Requirements
 
@@ -19,6 +23,8 @@ npm install --save-dev eslint-plugin-chai-expect
 
 
 ## Configuration
+
+### Legacy ESLint Configuration Format (.eslintrc.json)
 
 Add a `plugins` section and specify `chai-expect` as a plugin:
 
@@ -50,6 +56,42 @@ and just extend the config:
 {
   "extends": ["plugin:chai-expect/recommended"]
 }
+```
+
+### Flat ESLint Configuration Format (eslint.config.js)
+
+Add a `plugins` section and specify `chai-expect` as a plugin and enable the rules that you would like to use:
+
+```js
+import chaiExpectPlugin from 'eslint-plugin-chai-expect';
+
+export default [
+  {
+    "plugins": {
+      "chai-expect": chaiExpectPlugin
+    },
+    "rules": {
+      "chai-expect/no-inner-compare": 2,
+      "chai-expect/no-inner-literal": 2,
+      "chai-expect/missing-assertion": 2,
+      "chai-expect/terminating-properties": 2
+    }
+  }
+];
+```
+
+Or, if you just want the above defaults, you can avoid all of the above
+and just extend the config:
+
+```js
+import chaiExpectPlugin from 'eslint-plugin-chai-expect';
+
+export default [
+  chaiExpectPlugin.configs["recommended-flat"],
+  {
+    // ...
+  },
+];
 ```
 
 ## Rules
