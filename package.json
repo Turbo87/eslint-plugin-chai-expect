@@ -34,7 +34,7 @@
     "eslint-test:run": "node scripts/tests-eslint-run.js"
   },
   "peerDependencies": {
-    "eslint": ">=2.0.0 <= 8.x"
+    "eslint": ">=7.x"
   },
   "dependencies": {},
   "devDependencies": {
@@ -45,7 +45,7 @@
     "nyc": "15.1.0"
   },
   "engines": {
-    "node": "10.* || 12.* || >= 14.*"
+    "node": ">= 16.*"
   },
   "greenkeeper": {
     "ignore": [
