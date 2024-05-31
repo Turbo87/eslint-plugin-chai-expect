@@ -1,0 +1,8 @@
+/tests/
+/.editorconfig
+/.eslintignore
+/.eslintrc.json
+/.gitignore
+/.npmignore
+/.travis.yml
+/yarn.lock
