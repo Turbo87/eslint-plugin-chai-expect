@@ -1,8 +1,7 @@
-'use strict';
+import eslint from 'eslint';
+import plugin from 'eslint-plugin-chai-expect';
 
-const { RuleTester } = require('eslint');
-const plugin = require('eslint-plugin-chai-expect');
-
+const RuleTester  = eslint.RuleTester;
 const rule = plugin.rules['missing-assertion'];
 
 let ruleTester = new RuleTester();

@@ -1,8 +1,7 @@
-'use strict';
+import eslintUtils from 'eslint/use-at-your-own-risk';
+import plugin from 'eslint-plugin-chai-expect';
 
-const { FlatRuleTester  } = require('eslint/use-at-your-own-risk');
-const plugin = require('eslint-plugin-chai-expect');
-
+const FlatRuleTester  = eslintUtils.FlatRuleTester;
 const rule = plugin.rules['missing-assertion'];
 
 let ruleTester = new FlatRuleTester();

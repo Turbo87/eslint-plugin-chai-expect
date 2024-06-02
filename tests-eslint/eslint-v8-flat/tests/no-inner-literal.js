@@ -1,8 +1,7 @@
-'use strict';
+import eslintUtils from 'eslint/use-at-your-own-risk';
+import plugin from 'eslint-plugin-chai-expect';
 
-const { FlatRuleTester  } = require('eslint/use-at-your-own-risk');
-const plugin = require('eslint-plugin-chai-expect');
-
+const FlatRuleTester  = eslintUtils.FlatRuleTester;
 const rule = plugin.rules['no-inner-literal'];
 
 let ruleTester = new FlatRuleTester();
@@ -127,7 +126,7 @@ ruleTester.run('no-inner-literal', rule, {
     errors: [{
       message: '`false` used in expect()'
     }]
-  }, ...require('eslint/package.json').version.match(/^[1-5]\./) ? [] : [{
+  }, {
     code: 'expect(132n).to.be.ok;',
     errors: [{
       message: '`132n` used in expect()'
@@ -135,5 +134,5 @@ ruleTester.run('no-inner-literal', rule, {
     languageOptions: {
       ecmaVersion: 2020
     }
-  }]]
+  }]
 });

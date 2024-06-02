@@ -5,6 +5,7 @@
   "private": true,
   "main": "index.js",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "pretest": "eslint --version",
     "test": "npx mocha tests/**/*.js"

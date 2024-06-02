@@ -1,11 +1,10 @@
-'use strict';
+import eslintUtils from 'eslint/use-at-your-own-risk';
+import plugin from 'eslint-plugin-chai-expect';
 
-const { RuleTester } = require('eslint');
-const plugin = require('eslint-plugin-chai-expect');
-
+const FlatRuleTester  = eslintUtils.FlatRuleTester;
 const rule = plugin.rules['no-inner-compare'];
 
-let ruleTester = new RuleTester();
+let ruleTester = new FlatRuleTester();
 ruleTester.run('no-inner-compare', rule, {
   valid: [{
     code: 'new A();'
