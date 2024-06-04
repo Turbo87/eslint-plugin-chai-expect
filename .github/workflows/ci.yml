@@ -16,33 +16,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 18.18.x
+          node-version: 14.x
 
-      - run: yarn install --frozen-lockfile
+      - run: yarn install
       - run: yarn lint
 
   test-node:
     strategy:
       matrix:
-        node-version: [18.18.x, 20.x, 22.x]
+        node-version: [12.x, 14.x, 16.x]
 
     name: Tests (Node.js ${{ matrix.node-version }})
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
-      - run: yarn install --frozen-lockfile
+      - run: yarn install
       - run: yarn unit-test
 
   test-eslint:
-    name: Tests for all supported eslint versions
+    name: Tests with different eslint versions
     runs-on: ubuntu-latest
 
     steps:
@@ -51,6 +51,6 @@ jobs:
         with:
           node-version: 18.18.x
 
-      - run: yarn install --frozen-lockfile
+      - run: yarn install
       - run: yarn eslint-test:setup
       - run: yarn eslint-test:run
