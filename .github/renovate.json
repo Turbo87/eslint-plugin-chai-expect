@@ -14,5 +14,6 @@
       "updateTypes": ["minor"],
       "automerge": true
     }
-  ]
+  ],
+  "ignorePaths": ["tests-eslint/**"]
 }
