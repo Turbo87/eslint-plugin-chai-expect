@@ -41,16 +41,44 @@ jobs:
       - run: yarn install
       - run: yarn unit-test
 
-  test-eslint:
-    name: Tests with different eslint versions
+  test-eslint-flat:
+    name: Tests eslint versions using a flat configuration file
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 18.18.x
 
-      - run: yarn install
-      - run: yarn eslint-test:setup
-      - run: yarn eslint-test:run
+      - name: Run tests with eslint@9
+        run: |
+          cd tests-eslint/eslint-v9
+          yarn install
+          yarn test
+
+      - name: Run tests with eslint@8
+        run: |
+          cd tests-eslint/eslint-v8-flat
+          yarn install
+          yarn test
+
+  test-eslint-legacy:
+    strategy:
+      matrix:
+        eslint-version: [2.0.0, 3.0.0, 4.0.0, 5.0.0, 6.0.0, 7.0.0, 8.0.0]
+
+    name: Tests (ESLint ${{ matrix.eslint-version }}) using a legacy configuration file
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.18.x
+
+      - run: |
+          cd tests-eslint/eslint-legacy
+          yarn install
+          yarn add eslint@${{ matrix.eslint-version }}
+          yarn test
