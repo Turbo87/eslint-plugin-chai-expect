@@ -13,14 +13,6 @@
       "matchCurrentVersion": ">= 1.0.0",
       "updateTypes": ["minor"],
       "automerge": true
-    },
-    {
-      "matchPackageNames": ["eslint"],
-      "allowedVersions": "/^8\\.[0-9]+\\.[0-9]+$/"
-    },
-    {
-      "matchPackageNames": ["chai"],
-      "allowedVersions": "/^4\\.[0-9]+\\.[0-9]+$/"
     }
   ]
 }
