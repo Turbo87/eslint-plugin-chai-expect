@@ -1,4 +1,5 @@
 /tests/
+/tests-eslint7
 /.editorconfig
 /.eslintignore
 /.eslintrc.json
