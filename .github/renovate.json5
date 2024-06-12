@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "config:best-practices",
+    ":pinOnlyDevDependencies",
+    ":maintainLockFilesWeekly",
+    ":semanticCommitsDisabled",
+    ":automergePatch",
+    ":automergeStableNonMajor",
+    ":automergeLinters",
+    ":automergeTesters",
+    "customManagers:githubActionsVersions",
+  ],
+}
