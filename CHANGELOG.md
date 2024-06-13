@@ -1,5 +1,26 @@
 # Changelog
 
+## v3.1.0 (2024-06-13)
+
+#### :rocket: Enhancement
+* [#378](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/378) Add ESLint flat config support ([@BePo65](https://github.com/BePo65))
+* [#387](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/387) rules/terminating-properties: Add `schema` field ([@Turbo87](https://github.com/Turbo87))
+* [#248](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/248) Detect missing assertions in an arrow body ([@jonathanperret](https://github.com/jonathanperret))
+
+#### :house: Internal
+* [#391](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/391) Convert test suite to ESM ([@Turbo87](https://github.com/Turbo87))
+* [#390](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/390) ESLint: Migrate to flat config internally ([@Turbo87](https://github.com/Turbo87))
+* [#389](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/389) CI: Add ESLint 9 to test matrix ([@Turbo87](https://github.com/Turbo87))
+* [#388](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/388) Adjust test suite to be compatible with ESLint 9 ([@Turbo87](https://github.com/Turbo87))
+* [#386](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/386) Update gitignore from "Node" template ([@Turbo87](https://github.com/Turbo87))
+* [#381](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/381) Use current versions of github actions and node in github workflows and package.json ([@BePo65](https://github.com/BePo65))
+
+#### Committers: 3
+- Bernhard P. ([@BePo65](https://github.com/BePo65))
+- Jonathan Perret ([@jonathanperret](https://github.com/jonathanperret))
+- Tobias Bieniek ([@Turbo87](https://github.com/Turbo87))
+
+
 ## v3.0.0 (2021-10-20)
 
 #### :boom: Breaking Change
