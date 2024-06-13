@@ -2,6 +2,7 @@
 
 const rule = require('../../../lib/rules/no-inner-literal');
 const {RuleTester} = require('eslint');
+const {ecmaVersion} = require('./utils');
 
 let ruleTester = new RuleTester();
 ruleTester.run('no-inner-literal', rule, {
@@ -19,14 +20,10 @@ ruleTester.run('no-inner-literal', rule, {
     code: 'expect(a).to.equal(5);'
   }, {
     code: 'expect(`template literal`).to.equal(5);',
-    parserOptions: {
-      ecmaVersion: 2015
-    }
+    ...ecmaVersion(2015),
   }, {
     code: 'expect(tagged`template literal`).to.equal(5);',
-    parserOptions: {
-      ecmaVersion: 2015
-    }
+    ...ecmaVersion(2015),
   }, {
     code: `
       it('should have no problems', function () {
@@ -130,8 +127,6 @@ ruleTester.run('no-inner-literal', rule, {
     errors: [{
       message: '`132n` used in expect()'
     }],
-    parserOptions: {
-      ecmaVersion: 2020
-    }
+    ...ecmaVersion(2020),
   }]]
 });
