@@ -2,6 +2,7 @@
 
 const rule = require('../../../lib/rules/missing-assertion');
 const {RuleTester} = require('eslint');
+const {ecmaVersion} = require('./utils');
 
 let ruleTester = new RuleTester();
 ruleTester.run('missing-assertion', rule, {
@@ -31,7 +32,7 @@ ruleTester.run('missing-assertion', rule, {
     `
   }, {
     code: 'it("works as expected", () => expect(true).to.be.true);',
-    parserOptions: { ecmaVersion: 6 },
+    ...ecmaVersion(6),
   } ],
 
   invalid: [{
@@ -54,7 +55,7 @@ ruleTester.run('missing-assertion', rule, {
     }]
   }, {
     code: 'it("fails as expected", () => expect(true));',
-    parserOptions: { ecmaVersion: 6 },
+    ...ecmaVersion(6),
     errors: [{
       message: 'expect(...) used without assertion'
     }]
