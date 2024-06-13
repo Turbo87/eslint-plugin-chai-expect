@@ -1,6 +1,9 @@
 'use strict';
 
-const rule = require('../../../lib/rules/no-inner-compare');
+import rule from '../../../lib/rules/no-inner-compare.js';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
 const {RuleTester} = require('eslint');
 
 let ruleTester = new RuleTester();

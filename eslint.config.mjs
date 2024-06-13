@@ -5,7 +5,7 @@ export default [
   js.configs.recommended,
   {
     languageOptions: {
-      ecmaVersion: 2018,
+      ecmaVersion: 2020,
       globals: {
         ...globals.mocha,
         ...globals.node,

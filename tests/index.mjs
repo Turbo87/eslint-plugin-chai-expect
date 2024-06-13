@@ -1,11 +1,16 @@
 /* eslint-env mocha */
 'use strict';
 
-const plugin = require('..');
+import plugin from '../index.js';
 
-const assert = require('assert');
-const fs = require('fs');
-const path = require('path');
+import assert from 'node:assert';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 let rules = fs.readdirSync(path.resolve(__dirname, '../lib/rules/'))
   .map((f) => {

@@ -1,6 +1,9 @@
 'use strict';
 
-const rule = require('../../../lib/rules/terminating-properties');
+import rule from '../../../lib/rules/terminating-properties.js';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
 const {RuleTester} = require('eslint');
 
 let ruleTester = new RuleTester();

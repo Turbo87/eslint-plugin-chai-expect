@@ -29,7 +29,7 @@
   "scripts": {
     "lint": "eslint ./",
     "test": "npm run lint && npm run unit-test",
-    "unit-test": "nyc mocha tests/**/*.js"
+    "unit-test": "nyc mocha tests/**/*.mjs"
   },
   "peerDependencies": {
     "eslint": ">=2.0.0 <= 9.x"

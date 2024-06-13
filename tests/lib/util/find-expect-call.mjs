@@ -1,9 +1,12 @@
 'use strict';
 
-const importFrom = require('import-from');
-const {expect} = require('chai');
+import { createRequire } from 'node:module';
+import importFrom from 'import-from';
+import {expect} from 'chai';
+import findExpectCall from '../../../lib/util/find-expect-call.js';
+
+const require = createRequire(import.meta.url);
 const espree = importFrom(require.resolve('eslint'), 'espree');
-const findExpectCall = require('../../../lib/util/find-expect-call');
 
 describe('find-expect-call util', function () {
   it('Finds expect statements which are considered member expressions', function () {
