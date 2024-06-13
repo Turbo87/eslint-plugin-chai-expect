@@ -1,8 +1,11 @@
 'use strict';
 
-const rule = require('../../../lib/rules/no-inner-literal');
+import rule from '../../../lib/rules/no-inner-literal.js';
+import {ecmaVersion} from './utils.mjs';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
 const {RuleTester} = require('eslint');
-const {ecmaVersion} = require('./utils');
 
 let ruleTester = new RuleTester();
 ruleTester.run('no-inner-literal', rule, {
