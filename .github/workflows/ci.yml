@@ -41,20 +41,44 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn unit-test
 
-  test-eslint:
-    strategy:
-      matrix:
-        eslint-version: [2.0.0, 3.0.0, 4.0.0, 5.0.0, 6.0.0, 7.0.0, 8.0.0]
-
-    name: Tests (ESLint ${{ matrix.eslint-version }})
+  test-eslint-flat:
+    name: Tests eslint versions using a flat configuration file
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
       - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
         with:
-          node-version: 18.x
+          node-version: 18.18.x
 
-      - run: yarn install --frozen-lockfile
-      - run: yarn add eslint@${{ matrix.eslint-version }}
-      - run: yarn unit-test
+      - name: Run tests with eslint@9
+        run: |
+          cd tests-eslint/eslint-v9
+          yarn install --frozen-lockfile
+          yarn test
+
+      - name: Run tests with eslint@8
+        run: |
+          cd tests-eslint/eslint-v8-flat
+          yarn install --frozen-lockfile
+          yarn test
+
+  test-eslint-legacy:
+    strategy:
+      matrix:
+        eslint-version: [2.0.0, 3.0.0, 4.0.0, 5.0.0, 6.0.0, 7.0.0, 8.0.0]
+
+    name: Tests (ESLint ${{ matrix.eslint-version }}) using a legacy configuration file
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.18.x
+
+      - run: |
+          cd tests-eslint/eslint-legacy
+          yarn install --frozen-lockfile
+          yarn add eslint@${{ matrix.eslint-version }}
+          yarn test

@@ -1,8 +1,12 @@
 'use strict';
 
-module.exports = {
+const plugin = {
+  meta: {
+    name: "eslint-plugin-chai-export",
+    version: "3.0.0"
+},
   configs: {
-    recommended: {
+    'recommended-legacy': {
       plugins: ['chai-expect'],
       rules: {
         'chai-expect/no-inner-compare': 'error',
@@ -17,5 +21,22 @@ module.exports = {
     'no-inner-literal': require('./lib/rules/no-inner-literal'),
     'missing-assertion': require('./lib/rules/missing-assertion'),
     'terminating-properties': require('./lib/rules/terminating-properties')
-  }
+  },
+  processors: {}
 };
+
+Object.assign(plugin.configs, {
+  recommended: {
+      plugins: {
+        'chai-expect': plugin
+      },
+      rules: {
+        'chai-expect/no-inner-compare': 'error',
+        'chai-expect/no-inner-literal': 'error',
+        'chai-expect/missing-assertion': 'error',
+        'chai-expect/terminating-properties': 'error'
+      }
+  }
+})
+
+module.exports = plugin;

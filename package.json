@@ -27,12 +27,12 @@
     "url": "https://github.com/turbo87/eslint-plugin-chai-expect"
   },
   "scripts": {
-    "lint": "eslint ./",
+    "lint": "npx eslint ./",
     "test": "npm run lint && npm run unit-test",
     "unit-test": "nyc mocha tests/**/*.js"
   },
   "peerDependencies": {
-    "eslint": ">=2.0.0 <= 8.x"
+    "eslint": ">=2.0.0 <= 9.x"
   },
   "dependencies": {},
   "devDependencies": {

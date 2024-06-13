@@ -1,1 +1,5 @@
 node_modules/**
+
+// ignore test projects based on esm
+tests-eslint/eslint-v8-flat/**
+tests-eslint/eslint-v9/**
