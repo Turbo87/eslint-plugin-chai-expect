@@ -2,7 +2,7 @@
 
 const pkg = require('./package.json');
 
-let recommendedRules = {
+const recommendedRules = {
   'chai-expect/no-inner-compare': 'error',
   'chai-expect/no-inner-literal': 'error',
   'chai-expect/missing-assertion': 'error',
@@ -30,6 +30,7 @@ plugin.configs['recommended'] = {
 };
 
 plugin.configs['recommended-flat'] = {
+  name: 'chai-expect/recommended-flat',
   plugins: {
     'chai-expect': plugin,
   },
