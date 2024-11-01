@@ -36,9 +36,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@eslint/js": "9.13.0",
+    "@eslint/js": "9.14.0",
     "chai": "5.1.2",
-    "eslint": "9.13.0",
+    "eslint": "9.14.0",
     "globals": "15.11.0",
     "import-from": "4.0.0",
     "mocha": "10.8.2",
