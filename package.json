@@ -39,7 +39,7 @@
     "@eslint/js": "9.17.0",
     "chai": "5.1.2",
     "eslint": "9.17.0",
-    "globals": "15.13.0",
+    "globals": "15.14.0",
     "import-from": "4.0.0",
     "mocha": "11.0.1",
     "nyc": "17.1.0"
