@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
       - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
         with:
-          node-version: 18.x
+          node-version: 22.x
 
       - run: yarn install --frozen-lockfile
       - run: yarn lint
@@ -54,7 +54,7 @@ jobs:
       - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
       - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
         with:
-          node-version: 18.x
+          node-version: 22.x
 
       - run: yarn install --frozen-lockfile
       - run: yarn add eslint@${{ matrix.eslint-version }}
