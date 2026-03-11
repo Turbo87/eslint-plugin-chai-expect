@@ -32,14 +32,14 @@
     "unit-test": "nyc mocha tests/**/*.mjs"
   },
   "peerDependencies": {
-    "eslint": ">=2.0.0 <= 9.x"
+    "eslint": ">=2.0.0 <=10.x"
   },
   "dependencies": {},
   "devDependencies": {
-    "@eslint/js": "9.39.2",
+    "@eslint/js": "10.0.1",
     "chai": "6.2.2",
-    "eslint": "9.39.2",
-    "globals": "15.15.0",
+    "eslint": "10.0.2",
+    "globals": "16.5.0",
     "import-from": "4.0.0",
     "mocha": "11.7.5",
     "nyc": "17.1.0"
