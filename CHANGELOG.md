@@ -1,5 +1,22 @@
 # Changelog
 
+## v4.0.0 (2026-03-11)
+
+#### :boom: Breaking Change
+* Drop support for Node.js < 20 ([@PKief](https://github.com/PKief))
+
+#### :rocket: Enhancement
+* [#560](https://github.com/Turbo87/eslint-plugin-chai-expect/pull/560) Add ESLint 10 support ([@PKief](https://github.com/PKief))
+
+#### :house: Internal
+* Update CI to use Node.js 20+ ([@PKief](https://github.com/PKief))
+* Update README badges and requirements ([@PKief](https://github.com/PKief))
+* Fix `engines.node` field in package.json ([@PKief](https://github.com/PKief))
+
+#### Committers: 1
+- Philipp Kief ([@PKief](https://github.com/PKief))
+
+
 ## v3.1.0 (2024-06-13)
 
 #### :rocket: Enhancement
