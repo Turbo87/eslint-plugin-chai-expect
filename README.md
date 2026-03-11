@@ -1,6 +1,7 @@
 # eslint-plugin-chai-expect
 
-[![Build Status](https://img.shields.io/travis/Turbo87/eslint-plugin-chai-expect/master.svg)](https://travis-ci.org/Turbo87/eslint-plugin-chai-expect)
+[![CI](https://github.com/Turbo87/eslint-plugin-chai-expect/actions/workflows/ci.yml/badge.svg)](https://github.com/Turbo87/eslint-plugin-chai-expect/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/eslint-plugin-chai-expect.svg)](https://www.npmjs.com/package/eslint-plugin-chai-expect)
 
 ESLint plugin that checks for common chai.js `expect()` mistakes
 
@@ -11,8 +12,8 @@ ESLint plugin that checks for common chai.js `expect()` mistakes
 
 ## Requirements
 
-- Node.js 6 or above
-- ESLint 4.x or 5.x or 6.x
+- Node.js 20 or above
+- ESLint 2.x to 10.x
 
 
 ## Installation
@@ -134,4 +135,4 @@ The terminating-properties rule can be configured to ensure these (or other) add
 
 ## License
 
-eslint-plugin-chai-expect is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+eslint-plugin-chai-expect is licensed under the [MIT License](https://opensource.org/license/mit).
