@@ -2,12 +2,18 @@ name: Release
 
 on:
   push:
-    tags:
-      - "v*"
+    branches:
+      - master
+
+permissions:
+  contents: write # semantic-release: push release commit, tag, and changelog
+  issues: write # semantic-release: comment on released issues
+  pull-requests: write # semantic-release: comment on released pull requests
+  id-token: write # npm: trusted publishing via OIDC
 
 jobs:
-  release:
-    name: Release
+  test:
+    name: Test
     runs-on: ubuntu-latest
 
     steps:
@@ -15,8 +21,27 @@ jobs:
       - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
         with:
           node-version: 20.x
+
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
+
+  release:
+    name: Release
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
+        with:
+          node-version: 20.x
           registry-url: 'https://registry.npmjs.org'
 
-      - run: npm publish
+      - run: yarn install --frozen-lockfile
+      - run: npm install --no-save semantic-release @semantic-release/changelog @semantic-release/git
+      - run: npx semantic-release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
