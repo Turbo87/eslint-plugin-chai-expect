@@ -34,6 +34,11 @@ ruleTester.run('terminating-properties', rule, {
         expect(true).to.be.ok();
       });
     `,
+    output: `
+      it("fails as expected", function() {
+        expect(true).to.be.ok;
+      });
+    `,
     errors: [{
       message: '"to.be.ok" used as function'
     }]
@@ -43,6 +48,11 @@ ruleTester.run('terminating-properties', rule, {
         expect(true).to.be.false();
       });
     `,
+    output: `
+      it("fails as expected", function() {
+        expect(true).to.be.false;
+      });
+    `,
     errors: [{
       message: '"to.be.false" used as function'
     }]
@@ -50,6 +60,11 @@ ruleTester.run('terminating-properties', rule, {
     code: `
       it("fails as expected", function() {
         expect(true).to.exist();
+      });
+    `,
+    output: `
+      it("fails as expected", function() {
+        expect(true).to.exist;
       });
     `,
     errors: [{
@@ -63,6 +78,12 @@ ruleTester.run('terminating-properties', rule, {
         expect(result).to.be.somethingElse();
       });
     `,
+    output: `
+      it("fails as expected", function() {
+        expect(result).to.be.something;
+        expect(result).to.be.somethingElse;
+      });
+    `,
     errors: [{
       message: '"to.be.something" used as function'
     }, {
@@ -74,6 +95,11 @@ ruleTester.run('terminating-properties', rule, {
         return expect(true).to.exist();
       });
     `,
+    output: `
+      it("fails as expected", function() {
+        return expect(true).to.exist;
+      });
+    `,
     errors: [{
       message: '"to.exist" used as function'
     }]
@@ -83,6 +109,12 @@ ruleTester.run('terminating-properties', rule, {
       it("fails as expected", function() {
         expect(result).to.be.something();
         return expect(result).to.be.somethingElse();
+      });
+    `,
+    output: `
+      it("fails as expected", function() {
+        expect(result).to.be.something;
+        return expect(result).to.be.somethingElse;
       });
     `,
     errors: [{
