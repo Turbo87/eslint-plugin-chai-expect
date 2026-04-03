@@ -8,10 +8,10 @@
     ["@semantic-release/npm", {
       "npmPublish": true
     }],
+    "@semantic-release/github",
     ["@semantic-release/git", {
       "assets": ["CHANGELOG.md", "package.json"],
       "message": "chore(release): v${nextRelease.version}\n\n${nextRelease.notes}"
-    }],
-    "@semantic-release/github"
+    }]
   ]
 }

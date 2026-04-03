@@ -8,8 +8,8 @@
     "eslint-plugin",
     "eslintplugin"
   ],
-  "homepage": "https://github.com/turbo87/eslint-plugin-chai-expect",
-  "bugs": "https://github.com/turbo87/eslint-plugin-chai-expect/issues",
+  "homepage": "https://github.com/Turbo87/eslint-plugin-chai-expect",
+  "bugs": "https://github.com/Turbo87/eslint-plugin-chai-expect/issues",
   "license": "MIT",
   "author": "Tobias Bieniek <tobias.bieniek@gmail.com>",
   "contributors": [
@@ -24,7 +24,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/turbo87/eslint-plugin-chai-expect"
+    "url": "https://github.com/Turbo87/eslint-plugin-chai-expect"
   },
   "scripts": {
     "lint": "eslint ./",
