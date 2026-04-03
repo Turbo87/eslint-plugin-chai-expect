@@ -75,7 +75,8 @@ export default [
       "chai-expect/no-inner-compare": 2,
       "chai-expect/no-inner-literal": 2,
       "chai-expect/missing-assertion": 2,
-      "chai-expect/terminating-properties": 2
+      "chai-expect/terminating-properties": 2,
+      "chai-expect/no-uncalled-method": 2
     }
   }
 ];
@@ -105,6 +106,8 @@ export default [
   like `.to.be.ok`
 - `terminating-properties` - Prevent calling `to.be.ok` and other assertion
   properties as functions
+- `no-uncalled-method` - Prevent using `to.throw` and other assertion
+  methods as properties without calling them
 
 
 ### Additional configuration
@@ -127,6 +130,20 @@ The terminating-properties rule can be configured to ensure these (or other) add
   "rules": {
     "chai-expect/terminating-properties": ["error", {
       "properties": ["headers", "html", "ip", "json", "redirect", "test"]
+    }]
+  }
+}
+```
+
+#### no-uncalled-method rule
+
+By default, this rule checks for `throw`, `throws`, and `Throw`. You can configure additional methods that should not be used as properties:
+
+```json
+{
+  "rules": {
+    "chai-expect/no-uncalled-method": ["error", {
+      "methods": ["include", "satisfy", "respondTo"]
     }]
   }
 }

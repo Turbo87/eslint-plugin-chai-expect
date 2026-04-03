@@ -7,6 +7,7 @@ const recommendedRules = {
   'chai-expect/no-inner-literal': 'error',
   'chai-expect/missing-assertion': 'error',
   'chai-expect/terminating-properties': 'error',
+  'chai-expect/no-uncalled-method': 'error',
 };
 
 const plugin = {
@@ -19,7 +20,8 @@ const plugin = {
     'no-inner-compare': require('./lib/rules/no-inner-compare'),
     'no-inner-literal': require('./lib/rules/no-inner-literal'),
     'missing-assertion': require('./lib/rules/missing-assertion'),
-    'terminating-properties': require('./lib/rules/terminating-properties')
+    'terminating-properties': require('./lib/rules/terminating-properties'),
+    'no-uncalled-method': require('./lib/rules/no-uncalled-method')
   },
   processors: {}
 };
