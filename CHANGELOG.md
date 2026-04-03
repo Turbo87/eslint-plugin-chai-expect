@@ -1,3 +1,17 @@
+# [4.1.0](https://github.com/Turbo87/eslint-plugin-chai-expect/compare/v4.0.0...v4.1.0) (2026-04-03)
+
+
+### Bug Fixes
+
+* fix release workflow and repository URL casing ([1e183ec](https://github.com/Turbo87/eslint-plugin-chai-expect/commit/1e183ec5682e1ba0b940838ac638ec5ea2544521))
+* update CI to use Node 20 for releases and add ESLint 10 to test matrix ([dcbc717](https://github.com/Turbo87/eslint-plugin-chai-expect/commit/dcbc717c6f64511a8ff57be6f9886ea47bc9f36b))
+
+
+### Features
+
+* add auto-fix for terminating-properties and suggestions for no-inner-compare ([20a855b](https://github.com/Turbo87/eslint-plugin-chai-expect/commit/20a855be7e07932c134694d9d3a9353b356dbbd0))
+* add no-uncalled-method rule to detect assertion methods used as properties (closes [#222](https://github.com/Turbo87/eslint-plugin-chai-expect/issues/222)) ([8e61ed7](https://github.com/Turbo87/eslint-plugin-chai-expect/commit/8e61ed72c83441c00249bc9b670fda5661038e22))
+
 # Changelog
 
 ## [4.0.0](https://github.com/Turbo87/eslint-plugin-chai-expect/compare/v3.1.0...v4.0.0) (2026-03-11)
