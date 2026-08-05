@@ -41,7 +41,7 @@
     "eslint": "10.8.0",
     "globals": "17.9.0",
     "import-from": "4.0.0",
-    "mocha": "11.7.6",
+    "mocha": "11.8.0",
     "nyc": "18.0.0"
   },
   "engines": {
