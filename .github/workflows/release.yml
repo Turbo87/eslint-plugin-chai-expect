@@ -36,7 +36,6 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
           node-version: 24.x
-          registry-url: 'https://registry.npmjs.org'
 
       - run: yarn install --frozen-lockfile
       - run: npm install --no-save semantic-release @semantic-release/changelog @semantic-release/git
