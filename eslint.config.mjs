@@ -7,7 +7,6 @@ export default [
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
-        ...globals.mocha,
         ...globals.node,
       },
     },

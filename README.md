@@ -150,6 +150,15 @@ By default, this rule checks for `throw`, `throws`, and `Throw`. You can configu
 ```
 
 
+## Development
+
+Run `yarn test` to lint the project and run the tests with Node.js's built-in
+test runner. Use `yarn unit-test` to run only the tests.
+
+Run `yarn coverage` for Node.js's experimental coverage report. Coverage is
+informational; no minimum coverage threshold is enforced.
+
+
 ## License
 
 eslint-plugin-chai-expect is licensed under the [MIT License](https://opensource.org/license/mit).

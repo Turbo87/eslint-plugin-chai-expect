@@ -2,9 +2,10 @@
 
 import rule from '../../../lib/rules/no-inner-compare.js';
 import { createRequire } from 'node:module';
+import { RuleTester } from './rule-tester.mjs';
 
 const require = createRequire(import.meta.url);
-const {RuleTester} = require('eslint');
+
 const eslintVersion = parseInt(require('eslint/package.json').version.split('.')[0], 10);
 
 // ESLint 7+ supports suggestion testing in RuleTester

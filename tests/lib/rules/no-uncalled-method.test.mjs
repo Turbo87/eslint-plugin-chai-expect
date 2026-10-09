@@ -1,10 +1,7 @@
 'use strict';
 
 import rule from '../../../lib/rules/no-uncalled-method.js';
-import { createRequire } from 'node:module';
-
-const require = createRequire(import.meta.url);
-const {RuleTester} = require('eslint');
+import { RuleTester } from './rule-tester.mjs';
 
 let ruleTester = new RuleTester();
 ruleTester.run('no-uncalled-method', rule, {

@@ -2,10 +2,7 @@
 
 import {ecmaVersion} from './utils.mjs';
 import rule from '../../../lib/rules/missing-assertion.js';
-import { createRequire } from 'node:module';
-
-const require = createRequire(import.meta.url);
-const {RuleTester} = require('eslint');
+import { RuleTester } from './rule-tester.mjs';
 
 let ruleTester = new RuleTester();
 ruleTester.run('missing-assertion', rule, {

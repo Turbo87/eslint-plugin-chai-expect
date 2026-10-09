@@ -2,10 +2,10 @@
 
 import rule from '../../../lib/rules/no-inner-literal.js';
 import {ecmaVersion} from './utils.mjs';
+import { RuleTester } from './rule-tester.mjs';
 import { createRequire } from 'node:module';
 
 const require = createRequire(import.meta.url);
-const {RuleTester} = require('eslint');
 
 let ruleTester = new RuleTester();
 ruleTester.run('no-inner-literal', rule, {
