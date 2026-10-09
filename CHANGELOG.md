@@ -1,3 +1,10 @@
+## [4.1.1](https://github.com/Turbo87/eslint-plugin-chai-expect/compare/v4.1.0...v4.1.1) (2026-10-09)
+
+
+### Bug Fixes
+
+* remove registry auth configuration from release ([ffc38d0](https://github.com/Turbo87/eslint-plugin-chai-expect/commit/ffc38d0f3f38b7bbb2c06a42b58391602f715eb4))
+
 # [4.1.0](https://github.com/Turbo87/eslint-plugin-chai-expect/compare/v4.0.0...v4.1.0) (2026-04-03)
 
 
