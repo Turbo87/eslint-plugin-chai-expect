@@ -44,9 +44,6 @@
   "overrides": {
     "eslint": {
       "minimatch@>=10 <11": "11.0.3"
-    },
-    "@eslint/config-array": {
-      "minimatch@>=10 <11": "11.0.3"
     }
   },
   "engines": {
