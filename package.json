@@ -41,6 +41,14 @@
     "eslint": "10.13.0",
     "globals": "17.13.0"
   },
+  "overrides": {
+    "eslint": {
+      "minimatch@>=10 <11": "11.0.3"
+    },
+    "@eslint/config-array": {
+      "minimatch@>=10 <11": "11.0.3"
+    }
+  },
   "engines": {
     "node": ">= 20"
   },

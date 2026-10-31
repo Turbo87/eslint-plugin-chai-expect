@@ -152,10 +152,12 @@ By default, this rule checks for `throw`, `throws`, and `Throw`. You can configu
 
 ## Development
 
-Run `yarn test` to lint the project and run the tests with Node.js's built-in
-test runner. Use `yarn unit-test` to run only the tests.
+Install dependencies with `npm ci`.
 
-Run `yarn coverage` for Node.js's experimental coverage report. Coverage is
+Run `npm test` to lint the project and run the tests with Node.js's built-in
+test runner. Use `npm run unit-test` to run only the tests.
+
+Run `npm run coverage` for Node.js's experimental coverage report. Coverage is
 informational; no minimum coverage threshold is enforced.
 
 

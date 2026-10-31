@@ -22,8 +22,8 @@ jobs:
         with:
           node-version: 24.x
 
-      - run: yarn install --frozen-lockfile
-      - run: yarn lint
+      - run: npm ci
+      - run: npm run lint
 
   test-node:
     strategy:
@@ -39,8 +39,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - run: yarn install --frozen-lockfile
-      - run: yarn unit-test
+      - run: npm ci
+      - run: npm run unit-test
 
   test-eslint:
     strategy:
@@ -56,6 +56,6 @@ jobs:
         with:
           node-version: 24.x
 
-      - run: yarn install --frozen-lockfile
-      - run: yarn add eslint@${{ matrix.eslint-version }}
-      - run: yarn unit-test
+      - run: npm ci
+      - run: npm install --save-dev --ignore-scripts --legacy-peer-deps eslint@${{ matrix.eslint-version }}
+      - run: npm run unit-test
