@@ -13,7 +13,8 @@
   "license": "MIT",
   "author": "Tobias Bieniek <tobias.bieniek@gmail.com>",
   "contributors": [
-    "Brett Zamir"
+    "Brett Zamir",
+    "Philipp Kief"
   ],
   "files": [
     "LICENSE",
@@ -40,11 +41,6 @@
     "@eslint/js": "10.0.1",
     "eslint": "10.15.0",
     "globals": "17.14.0"
-  },
-  "overrides": {
-    "eslint": {
-      "minimatch@>=10 <11": "11.0.3"
-    }
   },
   "engines": {
     "node": ">= 20"
